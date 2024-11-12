@@ -1,5 +1,5 @@
 import { HydrateClient } from "~/trpc/server";
-import { CreatePostForm } from "./_components/posts";
+import { CoinView } from "./_components/coins";
 
 export default function HomePage() {
   return (
@@ -7,10 +7,10 @@ export default function HomePage() {
       <main className="container h-screen py-16">
         <div className="flex flex-col items-center justify-center gap-4">
           <h1 className="text-5xl font-extrabold tracking-tight sm:text-[5rem]">
-            Create <span className="text-primary">T3</span> Turbo
+            Asset Tracker
           </h1>
-          ENVIRONMENT: {process.env.NEXT_PUBLIC_DEPLOYMENT_ENVIRONMENT}
-          <CreatePostForm />
+          <p>Track your favourite assets</p>
+          <CoinView />
         </div>
       </main>
     </HydrateClient>
