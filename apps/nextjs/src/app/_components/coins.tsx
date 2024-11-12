@@ -1,5 +1,6 @@
 "use client";
 
+import { Suspense } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 
 import type { RouterOutputs } from "@acme/api";
@@ -20,7 +21,9 @@ export function CoinView() {
           Change (24h)
         </Button>
       </div>
-      <CoinList />
+      <Suspense fallback={<>loading...</>}>
+        <CoinList />
+      </Suspense>
     </>
   );
 }
